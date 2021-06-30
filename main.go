@@ -16,6 +16,8 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/adamdecaf/odfw/internal/exec"
+
 	"github.com/gorilla/mux"
 )
 
@@ -54,6 +56,9 @@ func main() {
 			}
 		}
 	}()
+
+	cfg := &exec.Config{}
+	exec.Basic(shutdownCtx, cfg)
 
 	handler := mux.NewRouter()
 	if *flagBasePath != "" {
