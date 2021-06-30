@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <link rel="preload" href="/themes/custom/ts_odfw/ODFW_icons/fonts/ODFW_icons.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/themes/custom/ts_odfw/fonts/libre-franklin-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ts_odfw/fonts/libre-franklin-v2-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ts_odfw/fonts/libre-franklin-v2-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ts_odfw/fonts/libre-franklin-v2-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ts_odfw/fonts/merriweather-v19-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ts_odfw/fonts/merriweather-v19-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ts_odfw/fonts/merriweather-v19-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ts_odfw/fonts/merriweather-v19-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"c95efe66bf",applicationID:"32206200"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){d("pageHide",[p.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1209.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2855363-8", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="description" content="Each year, ODFW stocks millions of trout in dozens of reservoirs, lakes and ponds throughout the state. You can use the search and filter functions to search the stocking schedule for specific locations and dates. The schedule is subject to change without notice; see individual waterbody listings in the Recreation Report for updates." />
+<meta name="google-site-verification" content="PvfGG1JxZgn9IRx4VgPU98iAoX9FLpNJJHvbzqeQQbI" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/ts_odfw/images/svgs/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://myodfw.com/fishing/species/trout/stocking-schedule" />
+<link rel="shortlink" href="https://myodfw.com/node/76" />
+<link rel="revision" href="https://myodfw.com/fishing/species/trout/stocking-schedule" />
+
+    <title>Weekly trout stocking schedule | Oregon Department of Fish &amp; Wildlife</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_0_e7399ee484c220e966cc9d6bec8de661cdce8ba7571335c5fcc5888ca8110877.css?theme=ts_odfw&amp;include=core/normalize%2Csystem/base%2Ccore/jquery.ui.datepicker%2Cviews/views.module%2Ccore/jquery.ui.autocomplete%2Cckeditor_indentblock/indentblock%2Cparagraphs/drupal.paragraphs.unpublished%2Cresponsive_tables_filter/tablesaw-filter%2Cclassy/base%2Cclassy/messages%2Ccore/drupal.progress%2Cts_odfw/ts_odfw_icons" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_1_e7399ee484c220e966cc9d6bec8de661cdce8ba7571335c5fcc5888ca8110877.css?theme=ts_odfw&amp;include=core/normalize%2Csystem/base%2Ccore/jquery.ui.datepicker%2Cviews/views.module%2Ccore/jquery.ui.autocomplete%2Cckeditor_indentblock/indentblock%2Cparagraphs/drupal.paragraphs.unpublished%2Cresponsive_tables_filter/tablesaw-filter%2Cclassy/base%2Cclassy/messages%2Ccore/drupal.progress%2Cts_odfw/ts_odfw_icons" />
+<link rel="stylesheet" media="all" href="/themes/custom/ts_odfw/dist/main.css?qva5oz" />
+<link rel="stylesheet" media="print" href="/themes/custom/ts_odfw/css/print.css?qva5oz" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4_e7399ee484c220e966cc9d6bec8de661cdce8ba7571335c5fcc5888ca8110877.css?theme=ts_odfw&amp;include=core/normalize%2Csystem/base%2Ccore/jquery.ui.datepicker%2Cviews/views.module%2Ccore/jquery.ui.autocomplete%2Cckeditor_indentblock/indentblock%2Cparagraphs/drupal.paragraphs.unpublished%2Cresponsive_tables_filter/tablesaw-filter%2Cclassy/base%2Cclassy/messages%2Ccore/drupal.progress%2Cts_odfw/ts_odfw_icons" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_0_e4b25c6aeac6a051d62ff02824f424c12ad5f7596b5adce6ae758b9033500d85.js?include=core/html5shiv&amp;theme=ts_odfw&amp;scope=header"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+    <script src="https://use.typekit.net/sex4erg.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NMDTK5G');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body class="stocking-schedule-page path-node page-node-type-page section--fishing section-icon-icon-fishing rr-section-">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMDTK5G" height="0" width="0" style="display:none;visibility:hidden" aria-hidden=
+    "true"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <header>
+  <div class="top-nav">
+    <div class="container">
+                <div class="region region-logo">
+    <div id="block-ts-odfw-branding" class="block block-system block-system-branding-block">
+  
+    
+        <a href="/" rel="home">
+      <div class="site-branding">
+        <img src="/themes/custom/ts_odfw/images/svgs/ODFWLogo_vector.svg" alt="Home" class="site-logo"/>
+                  <div class="site-name">Oregon Department of Fish &amp; Wildlife</div>
+              </div>
+    </a>
+    </div>
+
+  </div>
+
+                        <div class="region region-secondary-nav">
+    <div id="block-alertsblock" class="block block-odfw-alerts block-alerts-block">
+    
+        
+          <div class="views-element-container"><div class="alerts-block view view-alerts view-id-alerts view-display-id-block_1 js-view-dom-id-c9f8adb55c5ab438814354b3f6b658738111030177314b6e01eec1ecdfd629e5 h3-bold">
+  
+    
+      <div class="view-header">
+                        <button class="alerts-button link-orange" aria-label="alerts">3 Alerts</button>
+                  </div>
+      
+      <div class="view-content">
+              <button class="close-alerts button-close white" aria-label="Close alerts">X</button>
+                <div class="views-row"><div class="odfw-alerts">
+      
+            <div class="field field--name-field-link field--type-link field--label-hidden field__item"><a href="https://myodfw.com/recreation-report/crabbing-clamming-report/marine-zone">Central coast opens to razor clamming</a></div>
+      
+            <div class="clearfix text-formatted field field--name-field-intro field--type-text-long field--label-hidden field__item"><p>Razor clamming is now open from Cape Lookout south to the CA border. Clatsop County beaches remain closed.</p>
+</div>
+      
+  </div>
+</div>
+    <div class="views-row"><div class="odfw-alerts">
+      
+            <div class="field field--name-field-link field--type-link field--label-hidden field__item"><span>ODFW offices close to public access</span></div>
+      
+            <div class="clearfix text-formatted field field--name-field-intro field--type-text-long field--label-hidden field__item"><p>All  ODFW offices remain closed to visitors. ODFW staff will be available by phone and email.</p>
+</div>
+      
+  </div>
+</div>
+    <div class="views-row"><div class="odfw-alerts">
+      
+            <div class="field field--name-field-link field--type-link field--label-hidden field__item"><span>ODFW hatcheries reopen to public on limited basis</span></div>
+      
+            <div class="clearfix text-formatted field field--name-field-intro field--type-text-long field--label-hidden field__item"><p>Hatcheries have partially reopened during normal visiting hours (8-5 in most cases). Most indoor areas, visitor centers and restrooms remain closed so please plan accordingly. </p>
+</div>
+      
+  </div>
+</div>
+
+    </div>
+  
+          </div>
+
+</div>
+
+    </div>
+<nav role="navigation" aria-labelledby="block-secondary-menu" id="block-secondary" class="block block-menu navigation menu--secondary">
+            
+  <h2 class="visually-hidden" id="block-secondary-menu">Secondary</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/about" title="About ODFW" data-drupal-link-system-path="node/2">About ODFW</a>
+              </li>
+                <li class="menu-item">
+        <a href="/articles" title="Articles" data-drupal-link-system-path="node/3">Articles</a>
+              </li>
+                <li class="menu-item">
+        <a href="/workshops-and-events" title="Workshops &amp; Events" data-drupal-link-system-path="node/4">Workshops &amp; Events</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-licensebutton-menu" id="block-licensebutton" class="block block-menu navigation menu--license-button">
+            
+  <h2 class="visually-hidden" id="block-licensebutton-menu">Buy license/Report hunt</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://odfw.huntfishoregon.com/login" title="Buy a License ">Buy license</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+            </div>
+  </div>
+      <div class="region region-primary-nav">
+  <div class="container">
+    <div class="views-exposed-form block block-views block-views-exposed-filter-blocksearch-page-1" data-drupal-selector="views-exposed-form-search-page-1" id="block-exposedformsearchpage-1">
+  <button class="nav-search-icon button-brown" aria-label="Search"></button>
+  
+    
+      <form action="/search" method="get" id="views-exposed-form-search-page-1" accept-charset="UTF-8">
+  <div class="form--inline clearfix">
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-phrase form-item-phrase">
+      <label for="edit-phrase">Search</label>
+        <input data-drupal-selector="edit-phrase" type="text" id="edit-phrase" name="phrase" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-search" type="submit" id="edit-submit-search" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+</div>
+
+</form>
+
+  </div>
+
+    <button class="mobile-menu-icon" aria-label="Menu">
+      <div>
+        <span aria-hidden="false"></span>
+      </div>
+    </button>
+    <nav role="navigation" aria-labelledby="block-ts-odfw-main-menu-menu" id="block-ts-odfw-main-menu" class="block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-ts-odfw-main-menu-menu">Main navigation</h2>
+  
+
+        
+              <ul class="menu">
+    
+          <li class="menu menu-item secondary-item"><a href="/about">About ODFW</a></li>
+          <li class="menu menu-item secondary-item"><a href="/articles">Articles</a></li>
+          <li class="menu menu-item secondary-item"><a href="/workshops-and-events">Workshops &amp; Events</a></li>
+    
+                <li class="menu-item menu-item--collapsed">
+                  <a href="/recreation-report" data-drupal-link-system-path="taxonomy/term/1">Recreation Report</a>
+                      </li>
+                <li class="menu-item menu-item--collapsed menu-item--active-trail">
+                  <a href="/fishing" data-drupal-link-system-path="taxonomy/term/2">Fishing</a>
+                      </li>
+                <li class="menu-item menu-item--collapsed">
+                  <a href="/crabbing-clamming" data-drupal-link-system-path="taxonomy/term/3">Crabbing &amp; Clamming</a>
+                      </li>
+                <li class="menu-item menu-item--collapsed">
+                  <a href="/big-game-hunting" data-drupal-link-system-path="taxonomy/term/4">Big Game Hunting</a>
+                      </li>
+                <li class="menu-item menu-item--collapsed">
+                  <a href="/game-bird-hunting" data-drupal-link-system-path="taxonomy/term/5">Game Bird Hunting</a>
+                      </li>
+                <li class="menu-item menu-item--collapsed">
+                  <a href="/wildlife-viewing" data-drupal-link-system-path="taxonomy/term/6">Wildlife Viewing</a>
+                      </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+</div>
+
+    </header>
+<main id="main-content">
+                <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-ts-odfw-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="region region-hero">
+  <div class="container">
+          <!-- No content rendered, as no background image provided -->
+        <div class="region region-hero">
+  <div class="container">
+    <a href="#end-nav" class="visually-hidden focusable skip-link">
+    Skip section navigation
+</a>
+<nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+                        
+    <h2 class="visually-hidden" id="block-mainnavigation-menu">Main navigation</h2>
+    
+
+                
+              <ul class="menu">
+    
+          <li class="menu menu-item secondary-item"><a href="/about">About ODFW</a></li>
+          <li class="menu menu-item secondary-item"><a href="/articles">Articles</a></li>
+          <li class="menu menu-item secondary-item"><a href="/workshops-and-events">Workshops &amp; Events</a></li>
+    
+                <li class="menu-item menu-item--active-trail">
+                  <a href="/fishing/species"><div  class="taxonomy-term taxonomy-term--type-site-sections taxonomy-term--view-mode-section-menu-item content-over-image">
+
+  
+  <div class="background-image">
+    
+            <div class="field field--name-field-menu-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-subnavigation-images">
+  
+      
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/360x187/public/381_warm_water_fish_swingle_odfw.jpg?itok=ijV4jm5o 1x" media="(min-width: 1200px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/288x150/public/381_warm_water_fish_swingle_odfw.jpg?itok=mKYasOUG 1x" media="(min-width: 583px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/400x75/public/381_warm_water_fish_swingle_odfw.jpg?itok=1d11Awyi" alt="a close up of a bass" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+  </div>
+  <div class="full-bleed-bgrd">
+    <div class="container">
+      <div class="top-level-content">
+        
+            <div class="field field--name-field-icon field--type-site-section-icon-list-field-type field--label-hidden field__item"><span class="icon-fish-species"></span></div>
+      
+            <div class="field field--name-taxonomy-term-title field--type-ds field--label-hidden field__item">  Species
+</div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+ </a>
+                      </li>
+                <li class="menu-item">
+                  <a href="/fishing/zones"><div  class="taxonomy-term taxonomy-term--type-site-sections taxonomy-term--view-mode-section-menu-item content-over-image">
+
+  
+  <div class="background-image">
+    
+            <div class="field field--name-field-menu-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-subnavigation-images">
+  
+      
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/360x187/public/first_fish_swart_odfw.jpg?itok=1mgfxYoc 1x" media="(min-width: 1200px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/288x150/public/first_fish_swart_odfw.jpg?itok=wZcveFA5 1x" media="(min-width: 583px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/400x75/public/first_fish_swart_odfw.jpg?itok=elX4AzPm" alt="A father and young son stand at the edge of a pond. The father is holding up a small fish his son caught. There is a snowy mountain in the background." typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+  </div>
+  <div class="full-bleed-bgrd">
+    <div class="container">
+      <div class="top-level-content">
+        
+            <div class="field field--name-field-icon field--type-site-section-icon-list-field-type field--label-hidden field__item"><span class="icon-oregon"></span></div>
+      
+            <div class="field field--name-taxonomy-term-title field--type-ds field--label-hidden field__item">  Zones
+</div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+ </a>
+                      </li>
+                <li class="menu-item">
+                  <a href="/fishing/seasonal-opportunities"><div  class="taxonomy-term taxonomy-term--type-site-sections taxonomy-term--view-mode-section-menu-item content-over-image">
+
+  
+  <div class="background-image">
+    
+            <div class="field field--name-field-menu-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-subnavigation-images">
+  
+      
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/360x187/public/0076_coho_fishing_swart_odfw.jpg?itok=UPnBlJ2j 1x" media="(min-width: 1200px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/288x150/public/0076_coho_fishing_swart_odfw.jpg?itok=uke4fdL7 1x" media="(min-width: 583px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/400x75/public/0076_coho_fishing_swart_odfw.jpg?itok=QMJaMtoX" alt="" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+  </div>
+  <div class="full-bleed-bgrd">
+    <div class="container">
+      <div class="top-level-content">
+        
+            <div class="field field--name-field-icon field--type-site-section-icon-list-field-type field--label-hidden field__item"><span class="icon-seasons"></span></div>
+      
+            <div class="field field--name-taxonomy-term-title field--type-ds field--label-hidden field__item">  Seasonal Opportunities
+</div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+ </a>
+                      </li>
+                <li class="menu-item">
+                  <a href="/fishing/licensing-info"><div  class="taxonomy-term taxonomy-term--type-site-sections taxonomy-term--view-mode-section-menu-item content-over-image">
+
+  
+  <div class="background-image">
+    
+            <div class="field field--name-field-menu-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-subnavigation-images">
+  
+      
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/360x187/public/0376_heading_for_open_water_swingle_odfw.jpg?itok=FV5EUV_o 1x" media="(min-width: 1200px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/288x150/public/0376_heading_for_open_water_swingle_odfw.jpg?itok=gDxfpKjD 1x" media="(min-width: 583px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/400x75/public/0376_heading_for_open_water_swingle_odfw.jpg?itok=RZUdaZ3R" alt="Looking at the ocean off the back of a fishing boat on the sea. The water is churning behind the boat and there are several fishing poles in their holders on the back of the boat." typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+  </div>
+  <div class="full-bleed-bgrd">
+    <div class="container">
+      <div class="top-level-content">
+        
+            <div class="field field--name-field-icon field--type-site-section-icon-list-field-type field--label-hidden field__item"><span class="icon-license-info"></span></div>
+      
+            <div class="field field--name-taxonomy-term-title field--type-ds field--label-hidden field__item">  Licensing Info
+</div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+ </a>
+                      </li>
+                <li class="menu-item">
+                  <a href="/fishing/workshops-events"><div  class="taxonomy-term taxonomy-term--type-site-sections taxonomy-term--view-mode-section-menu-item content-over-image">
+
+  
+  <div class="background-image">
+    
+            <div class="field field--name-field-menu-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-subnavigation-images">
+  
+      
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/360x187/public/2053_one_two_three_odfw.jpg?itok=oJ6Hm5pk 1x" media="(min-width: 1200px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/288x150/public/2053_one_two_three_odfw.jpg?itok=grwVHblm 1x" media="(min-width: 583px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/400x75/public/2053_one_two_three_odfw.jpg?itok=430wJAfK" alt="Three people stand on a gravel shore along a river. Each is casting a fishing line." typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+  </div>
+  <div class="full-bleed-bgrd">
+    <div class="container">
+      <div class="top-level-content">
+        
+            <div class="field field--name-field-icon field--type-site-section-icon-list-field-type field--label-hidden field__item"><span class="icon-calendar"></span></div>
+      
+            <div class="field field--name-taxonomy-term-title field--type-ds field--label-hidden field__item">  Workshops &amp; Events
+</div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+ </a>
+                      </li>
+        </ul>
+  
+
+
+    </nav>
+<div id="end-nav"></div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+<div class="region region-content">
+  <div class="intro-body-image">
+    
+    <div class="intro-wide">
+      
+            <div class="field field--name-odfw-node-section field--type-ds field--label-hidden field__item">Fishing</div>
+      
+<div class="field field--name-odfw-node-title field--type-ds field--label-hidden">
+  <h1>
+  Weekly trout stocking schedule
+</h1>
+</div>
+
+            <div class="clearfix text-formatted field field--name-field-intro field--type-text-long field--label-hidden field__item"><p><span><span>Each year, ODFW stocks millions of trout in dozens of reservoirs, lakes and ponds throughout the state. You can use the search and filter functions to search the stocking schedule for specific locations and dates. The schedule is subject to change without notice; see individual waterbody listings in the <a href="https://myodfw.com/recreation-report">Recreation Report</a> for updates.</span></span></p>
+</div>
+      
+    </div>
+              <div class="icon-rule-section">
+      </div>
+        <div class="sidebar-popout-wrapper">
+              <div class="body-narrow">
+                
+            <div property="schema:text" class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><h3 class="text-align-center">**PLEASE READ**</h3>
+<ul>
+<li><span><span><span>Currently, WILLAMETTE ZONE anglers should not rely on the online stocking schedule, as the Willamette Zone data is still being developed. Instead, they should rely on the Recreation Report for the most up-to-date stocking information.</span></span></span></li>
+<li><span><span>The schedule shows the WEEK a waterbody will be stocked, not the exact date. The Monday dates listed indicate the START of the week.</span></span></li>
+</ul>
+<h4><strong>Expect changes to the stocking schedule</strong></h4>
+<p><span><span><span>Trout stocking this year will be challenging in some areas of the state.  </span></span></span><span><span><span>Therefore, please check the Recreation Report for stocking updates and changes before heading out. Changes to the schedule will be noted there.</span></span></span></p>
+<p><span><span><span>Some waterbodies may not be stocked because of poor water conditions, and these fish will be diverted to another location. In other cases, stocking may happen a week before/after the scheduled date due to logistical challenges. Staff may need to make these decisions quickly, and not have time to update the stocking database.</span></span></span></p>
+<p> </p>
+</div>
+      
+            <div class="field field--name-field-iframe field--type-string-long field--label-hidden field__item"><style>.page-node-type-page .all-articles-block { margin-top: 0 }</style></div>
+      
+      </div>
+        </div>
+      </div>
+</div>
+<div class="region region-full-width-content">
+  <div class="container">
+    <div class="region region-full-width-content">
+  <div class="container">
+    <div class="views-element-container block block-views block-views-blockstocking-schedule-block-1" id="block-views-block-stocking-schedule-block-1">
+  
+      <h2>Stocking Schedule</h2>
+    
+      <div><div class="view view-stocking-schedule view-id-stocking_schedule view-display-id-block_1 js-view-dom-id-e4ddbfb55d46646581f695a8e5afed67233d0053dd91050e5965b178d7ea5f65">
+  
+    
+        <div class="view-filters">
+      <form class="views-exposed-form" data-drupal-selector="views-exposed-form-stocking-schedule-block-1" action="/fishing/species/trout/stocking-schedule" method="get" id="views-exposed-form-stocking-schedule-block-1" accept-charset="UTF-8">
+  <div class="form--inline clearfix">
+  <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-field-zone-value form-item-field-zone-value">
+      <label for="edit-field-zone-value">Filter by zone</label>
+        <select data-drupal-selector="edit-field-zone-value" id="edit-field-zone-value" name="field_zone_value" class="form-select"><option value="All">All Zones</option><option value="1">Central</option><option value="2">Northeast</option><option value="3">Northwest</option><option value="4">Southeast</option><option value="5">Southwest</option><option value="6" selected="selected">Willamette</option></select>
+        </div>
+<div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-field-waterbody-name-value-1 form-item-field-waterbody-name-value-1">
+      <label for="edit-field-waterbody-name-value-1">Search for waterbody</label>
+        <input data-drupal-selector="edit-field-waterbody-name-value-1" class="form-autocomplete form-text" data-autocomplete-path="/stocking/waterbody_autocomplete" type="text" id="edit-field-waterbody-name-value-1" name="field_waterbody_name_value_1" value="" size="30" maxlength="128" />
+
+        </div>
+<fieldset data-drupal-selector="edit-dates" id="edit-dates" class="js-form-item form-item js-form-wrapper form-wrapper">
+      <legend>
+    <span class="fieldset-legend">Filter by date</span>
+  </legend>
+  <div class="fieldset-wrapper">
+            <div class="datetime-wrapper">
+    <div id="edit-field-planned-stocking-date-value" class="container-inline">
+  <div class="js-form-item form-item js-form-type-date form-type-date js-form-item-field-planned-stocking-date-value-date form-item-field-planned-stocking-date-value-date form-no-label">
+      <label for="edit-field-planned-stocking-date-value-date" class="visually-hidden">Date</label>
+        
+<input data-drupal-selector="edit-field-planned-stocking-date-value-date" title="Date (e.g. 2021-06-29)" type="date" data-drupal-date-format="Y-m-d" id="edit-field-planned-stocking-date-value-date" name="field_planned_stocking_date_value[date]" value="" size="12" class="form-date" placeholder="mm/dd/yyyy" />
+
+        </div>
+
+</div>
+
+    </div>
+<div class="datetime-wrapper">
+    <div id="edit-field-planned-stocking-date-end-value" class="container-inline">
+  <div class="js-form-item form-item js-form-type-date form-type-date js-form-item-field-planned-stocking-date-end-value-date form-item-field-planned-stocking-date-end-value-date form-no-label">
+      <label for="edit-field-planned-stocking-date-end-value-date" class="visually-hidden">Date</label>
+        
+<input data-drupal-selector="edit-field-planned-stocking-date-end-value-date" title="Date (e.g. 2021-06-29)" type="date" data-drupal-date-format="Y-m-d" id="edit-field-planned-stocking-date-end-value-date" name="field_planned_stocking_date_end_value[date]" value="" size="12" class="form-date" placeholder="mm/dd/yyyy" />
+
+        </div>
+
+</div>
+
+    </div>
+
+          </div>
+</fieldset>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-stocking-schedule" type="submit" id="edit-submit-stocking-schedule" value="Apply" class="button js-form-submit form-submit" />
+<input data-drupal-selector="edit-reset" type="submit" id="edit-reset" name="op" value="Reset" class="button js-form-submit form-submit" />
+<div class="print-page"><a class="print-link" href="/fishing/species/trout/stocking-schedule-print?field_zone_value=6"><span class="print-icon"></span>Print Results</a></div></div>
+
+</div>
+
+</form>
+
+    </div>
+    
+      <div class="view-content">
+            <table class="tablesaw tablesaw-stack views-table views-view-table cols-7" data-tablesaw-mode="stack">
+        <thead>
+      <tr>
+                                                  <th id="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date" scope="col">Week of</th>
+                                                  <th id="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name" scope="col">Waterbody</th>
+                                                  <th id="view-field-zone-table-column" class="views-field views-field-field-zone" scope="col">Zone/Office</th>
+                                                  <th id="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage" scope="col">Legals</th>
+                                                  <th id="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1" scope="col">Trophy</th>
+                                                  <th id="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2" scope="col">Brood</th>
+                                                  <th id="view-field-number-table-column" class="views-field views-field-field-number" scope="col">Total</th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-06-28T12:00:00Z" class="datetime">Jun. 28, 2021</time>
+ - <time datetime="2021-07-02T12:00:00Z" class="datetime">Jul. 02, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">NORTH FORK RES          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Clackamas          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,000          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">2,000          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-06-28T12:00:00Z" class="datetime">Jun. 28, 2021</time>
+ - <time datetime="2021-07-02T12:00:00Z" class="datetime">Jul. 02, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">MCKENZIE R-2 (above Leaburg Dam)          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">800          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">800          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-06-28T12:00:00Z" class="datetime">Jun. 28, 2021</time>
+ - <time datetime="2021-07-02T12:00:00Z" class="datetime">Jul. 02, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">DETROIT RES          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,100          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">3,800          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">4,900          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-06-28T12:00:00Z" class="datetime">Jun. 28, 2021</time>
+ - <time datetime="2021-07-02T12:00:00Z" class="datetime">Jul. 02, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">ALTON BAKER CANAL          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,744          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">200          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,944          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-06-28T12:00:00Z" class="datetime">Jun. 28, 2021</time>
+ - <time datetime="2021-07-02T12:00:00Z" class="datetime">Jul. 02, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">FALL CR (WILLAMETTE R)          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,200          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,200          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-06-28T12:00:00Z" class="datetime">Jun. 28, 2021</time>
+ - <time datetime="2021-07-02T12:00:00Z" class="datetime">Jul. 02, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">ESTACADA LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Clackamas          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,334          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,334          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-06-28T12:00:00Z" class="datetime">Jun. 28, 2021</time>
+ - <time datetime="2021-07-02T12:00:00Z" class="datetime">Jul. 02, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SANTIAM R, N FK-2          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,200          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">2,200          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-06-28T12:00:00Z" class="datetime">Jun. 28, 2021</time>
+ - <time datetime="2021-07-02T12:00:00Z" class="datetime">Jul. 02, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SALMON CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">666          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">666          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-06-28T12:00:00Z" class="datetime">Jun. 28, 2021</time>
+ - <time datetime="2021-07-02T12:00:00Z" class="datetime">Jul. 02, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">BLUE R          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">733          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">733          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-06-28T12:00:00Z" class="datetime">Jun. 28, 2021</time>
+ - <time datetime="2021-07-02T12:00:00Z" class="datetime">Jul. 02, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">LEABURG LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,310          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,310          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-06-28T12:00:00Z" class="datetime">Jun. 28, 2021</time>
+ - <time datetime="2021-07-02T12:00:00Z" class="datetime">Jul. 02, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">QUARTZVILLE CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,000          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">2,000          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-05T12:00:00Z" class="datetime">Jul. 05, 2021</time>
+ - <time datetime="2021-07-09T12:00:00Z" class="datetime">Jul. 09, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">CLEAR LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,900          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">250          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">3,150          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-05T12:00:00Z" class="datetime">Jul. 05, 2021</time>
+ - <time datetime="2021-07-09T12:00:00Z" class="datetime">Jul. 09, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">WILLAMETTE R, CST FK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,000          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,000          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-05T12:00:00Z" class="datetime">Jul. 05, 2021</time>
+ - <time datetime="2021-07-09T12:00:00Z" class="datetime">Jul. 09, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">LEABURG LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,050          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,050          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-05T12:00:00Z" class="datetime">Jul. 05, 2021</time>
+ - <time datetime="2021-07-09T12:00:00Z" class="datetime">Jul. 09, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SALMON CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,300          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,300          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-05T12:00:00Z" class="datetime">Jul. 05, 2021</time>
+ - <time datetime="2021-07-09T12:00:00Z" class="datetime">Jul. 09, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SANTIAM R, N FK-2          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,800          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">2,800          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-05T12:00:00Z" class="datetime">Jul. 05, 2021</time>
+ - <time datetime="2021-07-09T12:00:00Z" class="datetime">Jul. 09, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">ALTON BAKER CANAL          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">743          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">743          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-05T12:00:00Z" class="datetime">Jul. 05, 2021</time>
+ - <time datetime="2021-07-09T12:00:00Z" class="datetime">Jul. 09, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">DETROIT RES          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">4,200          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">4,200          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-05T12:00:00Z" class="datetime">Jul. 05, 2021</time>
+ - <time datetime="2021-07-09T12:00:00Z" class="datetime">Jul. 09, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">QUARTZVILLE CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,400          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,400          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-12T12:00:00Z" class="datetime">Jul. 12, 2021</time>
+ - <time datetime="2021-07-16T12:00:00Z" class="datetime">Jul. 16, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">DETROIT RES          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">7,600          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">7,600          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-12T12:00:00Z" class="datetime">Jul. 12, 2021</time>
+ - <time datetime="2021-07-16T12:00:00Z" class="datetime">Jul. 16, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">LEABURG LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,050          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,050          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-12T12:00:00Z" class="datetime">Jul. 12, 2021</time>
+ - <time datetime="2021-07-16T12:00:00Z" class="datetime">Jul. 16, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">QUARTZVILLE CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,000          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">2,000          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-12T12:00:00Z" class="datetime">Jul. 12, 2021</time>
+ - <time datetime="2021-07-16T12:00:00Z" class="datetime">Jul. 16, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">NORTH FORK RES          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Clackamas          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,334          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">2,334          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-12T12:00:00Z" class="datetime">Jul. 12, 2021</time>
+ - <time datetime="2021-07-16T12:00:00Z" class="datetime">Jul. 16, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">CLEAR LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,500          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">2,500          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-12T12:00:00Z" class="datetime">Jul. 12, 2021</time>
+ - <time datetime="2021-07-16T12:00:00Z" class="datetime">Jul. 16, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">ALTON BAKER CANAL          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,743          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">200          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,943          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-12T12:00:00Z" class="datetime">Jul. 12, 2021</time>
+ - <time datetime="2021-07-16T12:00:00Z" class="datetime">Jul. 16, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">FALL CR (WILLAMETTE R)          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,200          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,200          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-12T12:00:00Z" class="datetime">Jul. 12, 2021</time>
+ - <time datetime="2021-07-16T12:00:00Z" class="datetime">Jul. 16, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">ESTACADA LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Clackamas          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,200          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,200          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-12T12:00:00Z" class="datetime">Jul. 12, 2021</time>
+ - <time datetime="2021-07-16T12:00:00Z" class="datetime">Jul. 16, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SANTIAM R, N FK-2          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,800          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">2,800          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-12T12:00:00Z" class="datetime">Jul. 12, 2021</time>
+ - <time datetime="2021-07-16T12:00:00Z" class="datetime">Jul. 16, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SALMON CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">666          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">666          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-19T12:00:00Z" class="datetime">Jul. 19, 2021</time>
+ - <time datetime="2021-07-23T12:00:00Z" class="datetime">Jul. 23, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">LEABURG LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,050          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,050          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-19T12:00:00Z" class="datetime">Jul. 19, 2021</time>
+ - <time datetime="2021-07-23T12:00:00Z" class="datetime">Jul. 23, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SANTIAM R, N FK-2          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,200          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">2,200          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-19T12:00:00Z" class="datetime">Jul. 19, 2021</time>
+ - <time datetime="2021-07-23T12:00:00Z" class="datetime">Jul. 23, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">ALTON BAKER CANAL          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">744          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">744          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-19T12:00:00Z" class="datetime">Jul. 19, 2021</time>
+ - <time datetime="2021-07-23T12:00:00Z" class="datetime">Jul. 23, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">CLEAR LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,900          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">250          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">3,150          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-19T12:00:00Z" class="datetime">Jul. 19, 2021</time>
+ - <time datetime="2021-07-23T12:00:00Z" class="datetime">Jul. 23, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">QUARTZVILLE CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,800          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,800          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-26T12:00:00Z" class="datetime">Jul. 26, 2021</time>
+ - <time datetime="2021-07-30T12:00:00Z" class="datetime">Jul. 30, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">CLEAR LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">5,000          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">5,000          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-26T12:00:00Z" class="datetime">Jul. 26, 2021</time>
+ - <time datetime="2021-07-30T12:00:00Z" class="datetime">Jul. 30, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">ALTON BAKER CANAL          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,743          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">200          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,943          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-26T12:00:00Z" class="datetime">Jul. 26, 2021</time>
+ - <time datetime="2021-07-30T12:00:00Z" class="datetime">Jul. 30, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SANTIAM R, N FK-2          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,800          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">2,800          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-07-26T12:00:00Z" class="datetime">Jul. 26, 2021</time>
+ - <time datetime="2021-07-30T12:00:00Z" class="datetime">Jul. 30, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">QUARTZVILLE CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,900          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,900          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-02T12:00:00Z" class="datetime">Aug. 02, 2021</time>
+ - <time datetime="2021-08-06T12:00:00Z" class="datetime">Aug. 06, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">QUARTZVILLE CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">1,100          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,100          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-02T12:00:00Z" class="datetime">Aug. 02, 2021</time>
+ - <time datetime="2021-08-06T12:00:00Z" class="datetime">Aug. 06, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">LEABURG LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,050          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,050          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-02T12:00:00Z" class="datetime">Aug. 02, 2021</time>
+ - <time datetime="2021-08-06T12:00:00Z" class="datetime">Aug. 06, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SALMON CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">667          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">667          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-02T12:00:00Z" class="datetime">Aug. 02, 2021</time>
+ - <time datetime="2021-08-06T12:00:00Z" class="datetime">Aug. 06, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SANTIAM R, N FK-2          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Corvallis          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">2,200          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">2,200          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-02T12:00:00Z" class="datetime">Aug. 02, 2021</time>
+ - <time datetime="2021-08-06T12:00:00Z" class="datetime">Aug. 06, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">ALTON BAKER CANAL          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">743          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">743          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-02T12:00:00Z" class="datetime">Aug. 02, 2021</time>
+ - <time datetime="2021-08-06T12:00:00Z" class="datetime">Aug. 06, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">CLEAR LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">3,900          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">3,900          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-09T12:00:00Z" class="datetime">Aug. 09, 2021</time>
+ - <time datetime="2021-08-13T12:00:00Z" class="datetime">Aug. 13, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SALMON CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,000          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,000          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-09T12:00:00Z" class="datetime">Aug. 09, 2021</time>
+ - <time datetime="2021-08-13T12:00:00Z" class="datetime">Aug. 13, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">ALTON BAKER CANAL          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,744          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">200          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,944          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-16T12:00:00Z" class="datetime">Aug. 16, 2021</time>
+ - <time datetime="2021-08-20T12:00:00Z" class="datetime">Aug. 20, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">ESTACADA LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Clackamas          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">1,334          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">1,334          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-16T12:00:00Z" class="datetime">Aug. 16, 2021</time>
+ - <time datetime="2021-08-20T12:00:00Z" class="datetime">Aug. 20, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">SALMON CR          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">667          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">667          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-16T12:00:00Z" class="datetime">Aug. 16, 2021</time>
+ - <time datetime="2021-08-20T12:00:00Z" class="datetime">Aug. 20, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">CLEAR LK          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">5,400          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">250          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">5,650          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-field-planned-stocking-date-table-column" class="views-field views-field-field-planned-stocking-date"><time datetime="2021-08-16T12:00:00Z" class="datetime">Aug. 16, 2021</time>
+ - <time datetime="2021-08-20T12:00:00Z" class="datetime">Aug. 20, 2021</time>
+          </td>
+                                                                                        <td headers="view-field-waterbody-name-table-column" class="views-field views-field-field-waterbody-name">ALTON BAKER CANAL          </td>
+                                                                                        <td headers="view-field-zone-table-column" class="views-field views-field-field-zone">Willamette / Springfield          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-table-column" class="views-field views-field-field-scheduling-life-stage">743          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-1-table-column" class="views-field views-field-field-scheduling-life-stage-1">0          </td>
+                                                                                        <td headers="view-field-scheduling-life-stage-2-table-column" class="views-field views-field-field-scheduling-life-stage-2">0          </td>
+                                                                                        <td headers="view-field-number-table-column" class="views-field views-field-field-number">743          </td>
+              </tr>
+      </tbody>
+</table>
+
+    </div>
+  
+        <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+    <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+    <ul class="pager__items js-pager__items">
+                                                        <li class="pager__item is-active">
+                                          <a href="?field_zone_value=6&amp;field_waterbody_name_value_1=&amp;field_planned_stocking_date_value&amp;field_planned_stocking_date_end_value&amp;page=0" title="Current page">
+            <span class="visually-hidden">
+              Current page
+            </span>1</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?field_zone_value=6&amp;field_waterbody_name_value_1=&amp;field_planned_stocking_date_value&amp;field_planned_stocking_date_end_value&amp;page=1" title="Go to page 2">
+            <span class="visually-hidden">
+              Page
+            </span>2</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?field_zone_value=6&amp;field_waterbody_name_value_1=&amp;field_planned_stocking_date_value&amp;field_planned_stocking_date_end_value&amp;page=2" title="Go to page 3">
+            <span class="visually-hidden">
+              Page
+            </span>3</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?field_zone_value=6&amp;field_waterbody_name_value_1=&amp;field_planned_stocking_date_value&amp;field_planned_stocking_date_end_value&amp;page=3" title="Go to page 4">
+            <span class="visually-hidden">
+              Page
+            </span>4</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?field_zone_value=6&amp;field_waterbody_name_value_1=&amp;field_planned_stocking_date_value&amp;field_planned_stocking_date_end_value&amp;page=4" title="Go to page 5">
+            <span class="visually-hidden">
+              Page
+            </span>5</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?field_zone_value=6&amp;field_waterbody_name_value_1=&amp;field_planned_stocking_date_value&amp;field_planned_stocking_date_end_value&amp;page=5" title="Go to page 6">
+            <span class="visually-hidden">
+              Page
+            </span>6</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?field_zone_value=6&amp;field_waterbody_name_value_1=&amp;field_planned_stocking_date_value&amp;field_planned_stocking_date_end_value&amp;page=6" title="Go to page 7">
+            <span class="visually-hidden">
+              Page
+            </span>7</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?field_zone_value=6&amp;field_waterbody_name_value_1=&amp;field_planned_stocking_date_value&amp;field_planned_stocking_date_end_value&amp;page=7" title="Go to page 8">
+            <span class="visually-hidden">
+              Page
+            </span>8</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?field_zone_value=6&amp;field_waterbody_name_value_1=&amp;field_planned_stocking_date_value&amp;field_planned_stocking_date_end_value&amp;page=8" title="Go to page 9">
+            <span class="visually-hidden">
+              Page
+            </span>9</a>
+        </li>
+                                      <li class="pager__item pager__item--next">
+          <a href="?field_zone_value=6&amp;field_waterbody_name_value_1=&amp;field_planned_stocking_date_value&amp;field_planned_stocking_date_end_value&amp;page=1" title="Go to next page" rel="next">
+            <span class="visually-hidden">Next page</span>
+            <span aria-hidden="true">››</span>
+          </a>
+        </li>
+                          <li class="pager__item pager__item--last">
+          <a href="?field_zone_value=6&amp;field_waterbody_name_value_1=&amp;field_planned_stocking_date_value&amp;field_planned_stocking_date_end_value&amp;page=8" title="Go to last page">
+            <span class="visually-hidden">Last page</span>
+            <span aria-hidden="true">Last »</span>
+          </a>
+        </li>
+          </ul>
+  </nav>
+
+          </div>
+
+</div>
+
+  </div>
+
+  </div>
+</div>
+
+    
+            <div class="field field--name-field-related-articles field--type-entity-reference-revisions field--label-hidden field__item">  <div class="paragraph paragraph--type--curated-list-of-articles paragraph--view-mode--default">
+          
+  <div class="field field--name-field-recommended-articles field--type-entity-reference field--label-above all-articles-block">
+    <div class="view-header"><h2 class="field__label">Explore Related Articles</h2></div>
+            <div class="field__items view-content">
+              <div class="field__item views-row"><div  class="odfw-card">
+  
+  <div class="card-image">
+        <a href="https://myodfw.com/articles/trout-stocking-maps">
+        
+            <div class="field field--name-field-header-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-article-event-thumbnail">
+  
+      
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/380x228/public/2018-03/009_marion_lake_bader_odfw.jpg?h=2065e794&amp;itok=IyqN1Zwm 1x" media="(min-width: 1200px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/380x228/public/2018-03/009_marion_lake_bader_odfw.jpg?h=2065e794&amp;itok=IyqN1Zwm 1x" media="(min-width: 583px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/350x210/public/2018-03/009_marion_lake_bader_odfw.jpg?h=2065e794&amp;itok=r3b8JC-e 1x" media="(min-width: 400px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/380x228/public/2018-03/009_marion_lake_bader_odfw.jpg?h=2065e794&amp;itok=IyqN1Zwm" alt="Marion Lake" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+        </a>
+      </div>
+  <div class="negative-title">
+    
+  </div>
+  <div class="card-body">
+    
+      <div class="field field--name-field-article-topics field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item">Where to fish</div>
+          </div>
+  
+            <div class="field field--name-node-title field--type-ds field--label-hidden field__item"><h3>
+  <a href="/articles/trout-stocking-maps" hreflang="en">Trout stocking maps</a>
+</h3>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-intro field--type-text-long field--label-hidden field__item"><p>Each year ODFW stocks millions of trout in dozens of reservoirs, lakes and ponds across the state.<br />
+Finding these locations...</p></div>
+      
+  </div>
+</div>
+
+</div>
+          <div class="field__item views-row"><div  class="odfw-card">
+  
+  <div class="card-image">
+        <a href="https://myodfw.com/articles/how-fish-trout">
+        
+            <div class="field field--name-field-header-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-article-event-thumbnail">
+  
+      
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/380x228/public/2018-03/fourmile_lake_trout_smith_odfw.jpg?h=2e9ad5b5&amp;itok=vJ2Ba6nl 1x" media="(min-width: 1200px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/380x228/public/2018-03/fourmile_lake_trout_smith_odfw.jpg?h=2e9ad5b5&amp;itok=vJ2Ba6nl 1x" media="(min-width: 583px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/350x210/public/2018-03/fourmile_lake_trout_smith_odfw.jpg?h=2e9ad5b5&amp;itok=5uLmPrWC 1x" media="(min-width: 400px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/380x228/public/2018-03/fourmile_lake_trout_smith_odfw.jpg?h=2e9ad5b5&amp;itok=vJ2Ba6nl" alt="Fishing Fourmile Lake" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+        </a>
+      </div>
+  <div class="negative-title">
+    
+  </div>
+  <div class="card-body">
+    
+      <div class="field field--name-field-article-topics field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item">How to fish</div>
+          </div>
+  
+            <div class="field field--name-node-title field--type-ds field--label-hidden field__item"><h3>
+  <a href="/articles/how-fish-trout" hreflang="en">How to fish for trout</a>
+</h3>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-intro field--type-text-long field--label-hidden field__item"><p>More people in Oregon fish for trout than for any other kind of fish. Anglers can experience a lifetime of...</p></div>
+      
+  </div>
+</div>
+
+</div>
+          <div class="field__item views-row"><div  class="odfw-card">
+  
+  <div class="card-image">
+        <a href="https://myodfw.com/articles/disabled-angler-access-map">
+        
+            <div class="field field--name-field-header-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-article-event-thumbnail">
+  
+      
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/380x228/public/2017-09/platform_cheadle_lake_odfw_hero.jpg?h=04a18793&amp;itok=jOJOMoas 1x" media="(min-width: 1200px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/380x228/public/2017-09/platform_cheadle_lake_odfw_hero.jpg?h=04a18793&amp;itok=jOJOMoas 1x" media="(min-width: 583px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/350x210/public/2017-09/platform_cheadle_lake_odfw_hero.jpg?h=04a18793&amp;itok=TNVq3KoD 1x" media="(min-width: 400px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/380x228/public/2017-09/platform_cheadle_lake_odfw_hero.jpg?h=04a18793&amp;itok=jOJOMoas" alt="Cheadle Lake platform" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+        </a>
+      </div>
+  <div class="negative-title">
+    
+  </div>
+  <div class="card-body">
+    
+      <div class="field field--name-field-article-topics field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item">Where to fish</div>
+          </div>
+  
+            <div class="field field--name-node-title field--type-ds field--label-hidden field__item"><h3>
+  <a href="/articles/disabled-angler-access-map" hreflang="en">Disabled angler access map</a>
+</h3>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-intro field--type-text-long field--label-hidden field__item"><p>Oregon is recognized for its wide array of fishing opportunities and the Oregon Department of Fish and Wildlife (ODFW) encourages...</p></div>
+      
+  </div>
+</div>
+
+</div>
+              </div>
+      </div>
+
+      </div>
+</div>
+      
+  </div>
+</div>
+
+
+  </div>
+
+
+  </main>
+    <footer class="footer bg-white">
+          <div id="block-emailsignupblock" class="block block-odfw-footer block-email-signup-block">
+  
+    
+      <p><a href="https://service.govdelivery.com/accounts/ORDFW/subscriber/new">Sign up for ODFW email updates</a></p>
+
+  </div>
+
+        <div class="container">
+            <div class="social_address">
+                <nav role="navigation" aria-labelledby="block-social-menu" id="block-social" class="block block-menu navigation menu--social">
+            
+  <h2 class="visually-hidden" id="block-social-menu">Social</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://www.facebook.com/MyODFW/" title="Facebook" class="Facebook">Facebook</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.flickr.com/photos/odfw/collections/" title="Flickr" class="Flickr">Flickr</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.instagram.com/myodfw/" title="Instagram" class="Instagram">Instagram</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://twitter.com/MyODFW" title="Twitter" class="Twitter">Twitter</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.youtube.com/user/IEODFW" title="YouTube" class="YouTube">YouTube</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+                <div id="block-addressblock" class="block block-odfw-footer block-address-block">
+  
+    
+      <p>4034 Fairview Industrial Drive SE<br />
+Salem, OR 97302<br />
+Main Phone (503) 947-6000<br />
+(800) 720-6339</p>
+
+  </div>
+
+            </div>
+            <div class="contact">
+                <div id="block-contactodfwblock" class="block block-odfw-footer block-contact-odfw-block">
+  
+    
+      <h4><a href="https://myodfw.com/about">Contact ODFW</a></h4>
+
+<p>Do you have a question or comment for ODFW?<br />
+Contact ODFW's Public Service Representative at: odfw.info@odfw.Oregon.gov</p>
+
+<p>Do you want to enter your opinion about a specific issue into the public record?&nbsp;<br />
+Contact: odfw.commission@odfw.Oregon.gov<br />
+Can’t find what you need? <a href="http://dfw.state.or.us/">Visit the ODFW's agency site</a>.</p>
+
+  </div>
+
+            </div>
+            <div class="tip">
+                <nav role="navigation" aria-labelledby="block-ts-odfw-footer-menu" id="block-ts-odfw-footer" class="block block-menu navigation menu--footer">
+            
+  <h2 class="visually-hidden" id="block-ts-odfw-footer-menu">Poacher Links</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://www.oregon.gov/osp/programs/fw/Pages/tip.aspx" title="Turn in Poachers">Turn in Poachers</a>
+              </li>
+                <li class="menu-item">
+        <a href="tel:1-800-452-7888" title="Turn in Poachers">Turn in Poachers</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+            </div>
+            <div id="block-copyrightblock" class="block block-odfw-footer block-copyright-block">
+  
+    
+      <p>© Copyright 2021 Oregon Department of Fish &amp; Wildlife</p>
+  </div>
+
+        </div>
+    </footer>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/76","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"field_zone_value":"6"}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"ckeditor_indentblock\/indentblock,classy\/base,classy\/messages,core\/drupal.autocomplete,core\/drupal.date,core\/html5shiv,core\/normalize,core\/picturefill,google_analytics\/google_analytics,odfw_stocking\/odfw-stocking,paragraphs\/drupal.paragraphs.unpublished,responsive_tables_filter\/tablesaw-filter,system\/base,ts_odfw\/ts_odfw,ts_odfw\/ts_odfw_icons,views\/views.module","theme":"ts_odfw","theme_token":null},"ajaxTrustedUrl":{"\/fishing\/species\/trout\/stocking-schedule":true,"\/search":true},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"user":{"uid":0,"permissionsHash":"dd82698065a74f311605a464278eacc16f6789594a05dcd0eea0eda51fdde1e4"}}</script>
+<script src="/sites/default/files/js/js_0_56bca51f1305322806966219ebf3c895aca5e1066a89fc32e04768be483ba578.js?include=core/picturefill%2Ccore/drupal.autocomplete%2Cgoogle_analytics/google_analytics%2Cts_odfw/ts_odfw%2Codfw_stocking/odfw-stocking%2Cresponsive_tables_filter/tablesaw-filter%2Ccore/drupal.date&amp;theme=ts_odfw&amp;scope=footer"></script>
+
+    <script id="__bs_script__">
+    //<![CDATA[
+//      document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.12.3.js'><\/script>".replace("HOST", location.hostname));
+    //]]>
+    </script>
+      <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57e30a886a11fb5f"></script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"c95efe66bf","applicationID":"32206200","transactionName":"M1MDNRYCVhVSUkVdDAoZIAIQClcIHEFQUwY7VQACDAY=","queueTime":0,"applicationTime":19,"atts":"HxQAQ14YRRs=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>
